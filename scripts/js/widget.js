@@ -12,7 +12,7 @@ $(document).ready(function() {
 	});
 	
 	$("#contentSortable").sortable({
-		revert: true
+		revert: false
 	});
 	
 	$(".left_nav").mouseenter(function(){
@@ -39,7 +39,6 @@ $(document).ready(function() {
 				var new_row = getRowHtmlString(type);
 
 				ui.draggable.empty();
-//				ui.draggable.html($(new_row).html());
 				ui.draggable.html(new_row);
 			}
 			
@@ -76,27 +75,47 @@ getRowHtmlString = function(type) {
 		case ('1'):
 			return "<div class='rowtype_1 contentRow'>"+
 						"<div class='widgetHolder size1of1' ></div>"+
+						"<div class='close' >"+
+							"<a class='uiCloseButton' onclick='return removeRow(this);' ></a>"+
+						"</div>"+
 					"</div>";
 		case ('2'):
 			return "<div class='rowtype_2 contentRow'>"+
-						"<div class='widgetHolder size2of3' ></div>"+
+						"<div class='widgetHolder mrm size2of3' ></div>"+
 						"<div class='widgetHolder size1of3' ></div>"+
+						"<div class='close' >"+
+								"<a class='uiCloseButton' onclick='return removeRow(this);' ></a>"+
+						"</div>"+
 					"</div>";	
 		case ('3'):
 			return "<div class='rowtype_3 contentRow'>"+
-						"<div class='widgetHolder size1of3' ></div>"+
+						"<div class='widgetHolder mrm size1of3' ></div>"+
 						"<div class='widgetHolder size2of3' ></div>"+
+						"<div class='close' >"+
+								"<a class='uiCloseButton' onclick='return removeRow(this);' ></a>"+
+						"</div>"+
 					"</div>";	
 		case ('4'):
 			return "<div class='rowtype_4 contentRow'>"+
+						"<div class='widgetHolder mrm size1of3' ></div>"+
+						"<div class='widgetHolder mrm size1of3' ></div>"+
 						"<div class='widgetHolder size1of3' ></div>"+
-						"<div class='widgetHolder size1of3' ></div>"+
-						"<div class='widgetHolder size1of3' ></div>"+
+						"<div class='close' >"+
+								"<a class='uiCloseButton' onclick='return removeRow(this);' ></a>"+
+						"</div>"+
 					"</div>";	
 		case ('5'):
 			return "<div class='rowtype_5 contentRow'>"+
+						"<div class='widgetHolder mrm size1of2' ></div>"+
 						"<div class='widgetHolder size1of2' ></div>"+
-						"<div class='widgetHolder size1of2' ></div>"+
+						"<div class='close' >"+
+								"<a class='uiCloseButton' onclick='return removeRow(this);' ></a>"+
+						"</div>"+
 					"</div>";						
 	}
+};
+
+removeRow = function(removeButton) {
+	$(removeButton).parent().parent().parent().remove(); 
+	return false;
 };

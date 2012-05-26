@@ -23,16 +23,26 @@
 
 .left_nav{position: fixed; z-index: 100; height: 500px; width: 20px; background-color: #DDD;}
 .left_nav:hover{width:150px; background-color: white;}
-.widgetElementIcons {height: 56px; width: 67px; float: left; margin: 2px; display: none; cursor: move;}
+.widgetElementIcons {height: 56px; width: 67px; float: left; display: none; cursor: move;}
 .widgetHolderIcons {height: 20px; background-color: #DDD; margin-right: 4px; float: left; display: none; cursor: move;}
 .bg_gray {background-color: #DDD;}
 .size2of3{width:64.2%;}
 .size1of3{width:31%;}
 .size1of2{width:47.5%;}
-.size1of1{width:98%;}
+.size1of1{width:97%;}
 
 .widgetHolderRow{height: 20px; margin-bottom: 5px;}
-.content{margin:30px; display:block; position: absolute; min-width: 900px; max-width: 1280px;}
-#contentSortable{border-color: black; border-style: solid; min-width: 800px; min-height: 600px;}
-.contentRow{height: 60px; margin-bottom: 5px;}
-.widgetHolder{height:60px; background-color:#DDD; margin-bottom: 10px; margin-right:20px; float:left;}
+.content{margin:30px; display:block; position: absolute; min-width: 1000px; max-width: 1280px;}
+#contentSortable{border-color: black; border-style: solid; min-width: 800px; min-height: 600px; padding-top: 20px;}
+
+.widgetHolder{height:60px; background-color:#DDD; margin-bottom: 10px; float:left;}
+
+.contentRow{height: 60px; margin-bottom: 10px;}
+.close{width: 2%; padding-left: 5px; float: left;}
+.uiCloseButton {background-image:url(../../images/fb_close.png);}
+.uiCloseButton:hover{background-position: left 30px; }
+.contentRow:hover .uiCloseButton{height: 15px; width: 15px; display: inline-block;}
+
+
+.mrm{margin-right:20px;}
+.mrs{margin-right:2px;}
