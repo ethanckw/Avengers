@@ -1,3 +1,4 @@
+// corechart
 function drawVisualization() {
     // Some raw data (not necessarily accurate)
     var data = google.visualization.arrayToDataTable([

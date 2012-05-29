@@ -1,3 +1,4 @@
+// geochart
 function drawVisualization() {
     var data = google.visualization.arrayToDataTable([
         ['Country', 'Popularity'],

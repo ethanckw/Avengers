@@ -12,10 +12,12 @@ function init() {
 function openEditor() {
   // Handler for the "Open Editor" button.
     var editor = new google.visualization.ChartEditor();
-    google.visualization.events.addListener(editor, 'ok',
-                                            function() {
-                                                wrapper = editor.getChartWrapper();
-                                                wrapper.draw(document.getElementById('visualization'));
-                                            });
+    google.visualization.events.addListener(
+        editor, 'ok',
+        function() {
+            wrapper = editor.getChartWrapper();
+            wrapper.draw(document.getElementById('visualization'));
+        }
+    );
     editor.openDialog(wrapper);
 }

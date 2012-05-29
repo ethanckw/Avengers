@@ -1,3 +1,4 @@
+// table
 function drawVisualization() {
   // Create and populate the data table.
     var data = google.visualization.arrayToDataTable([
@@ -8,6 +9,6 @@ function drawVisualization() {
     ]);
 
   // Create and draw the visualization.
-    visualization = new google.visualization.Table(document.getElementById('table'));
+    visualization = new google.visualization.Table(document.getElementById('visualization'));
     visualization.draw(data, null);
 }

@@ -6,7 +6,7 @@ use Data::Dumper;
 open my $INDEX_HTML, ">index.html"
     or die $!;
 
-my $cmd = 'ls -f1 | egrep html$ | grep -v index';
+my $cmd = 'ls -f1 | egrep html$ | grep -v index | sort';
 chomp( my @files = `$cmd` );
 
 header();

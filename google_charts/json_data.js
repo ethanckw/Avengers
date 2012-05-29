@@ -1,3 +1,4 @@
+// table
 function drawVisualization() {
   // Create and populate the data table.
     var JSONObject = {
@@ -10,6 +11,6 @@ function drawVisualization() {
     var data = new google.visualization.DataTable(JSONObject, 0.5);
 
   // Create and draw the visualization.
-    visualization = new google.visualization.Table(document.getElementById('table'));
+    visualization = new google.visualization.Table(document.getElementById('visualization'));
     visualization.draw(data, {'allowHtml': true});
 }

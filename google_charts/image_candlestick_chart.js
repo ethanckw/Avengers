@@ -1,3 +1,4 @@
+// imagechart
 function drawVisualization() {
   // Populate the data table.
     dataTable = google.visualization.arrayToDataTable([
