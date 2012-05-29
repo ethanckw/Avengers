@@ -49,3 +49,15 @@ sub div {
     </div>
 DIV
 }
+
+__END__
+
+=head1 OVERVIEW 
+
+    Generate a new index.html file pointing to all of the charts.
+
+=head1 USAGE
+
+    perl gen_index.pl
+
+=cut
