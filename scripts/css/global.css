@@ -1,53 +1,21 @@
-#CampaignTable {	background: url('../../images/report_sprite.png') 0 113px;}
-#CampaignLine {background: url('../../images/report_sprite.png') -66px 113px;}
-#CampaignPie {background: url('../../images/report_sprite.png') -133px 113px;}
-#CampaignBar {background: url('../../images/report_sprite.png') -200px 113px;}
-#CampaignChange {background: url('../../images/report_sprite.png') -267px 113px;}
-#Image {background: url('../../images/report_sprite.png') -334px 113px;}
-#Heading {background: url('../../images/report_sprite.png') -401px 113px;}
-#Comment {background: url('../../images/report_sprite.png') -468px 113px;}
-#Appendix {background: url('../../images/report_sprite.png') -536px 113px;}
-#CampaignScatter {background: url('../../images/report_sprite.png') -602px 113px;}
-#CampaignPeriod {background: url('../../images/report_sprite.png') -669px 113px;}
-#CampaignTable:hover {background: url('../../images/report_sprite.png') 0 56px;}
-#CampaignLine:hover {background: url('../../images/report_sprite.png') -66px 169px;}
-#CampaignPie:hover {	background: url('../../images/report_sprite.png') -133px 169px;}
-#CampaignBar:hover {	background: url('../../images/report_sprite.png') -200px 169px;}
-#CampaignChange:hover {background: url('../../images/report_sprite.png') -267px 169px;}
-#Image:hover {background: url('../../images/report_sprite.png') -334px 169px;}
-#Heading:hover {	background: url('../../images/report_sprite.png') -401px 170px;}
-#Comment:hover {background: url('../../images/report_sprite.png') -468px 170px;}
-#Appendix:hover {background: url('../../images/report_sprite.png') -536px 170px;}
-#CampaignScatter:hover {background: url('../../images/report_sprite.png') -602px 169px;}
-#CampaignPeriod:hover {background: url('../../images/report_sprite.png') -669px 169px;}
-
-.left_nav{position: fixed; z-index: 100; height: 500px; width: 1px; background-color: #DDD;}
+.left_nav{position: fixed; z-index: 100; height: 500px;}
 .left_nav:hover{width:150px; background-color: white;}
 .widgetElementIcons {height: 56px; width: 67px; float: left; display: none; cursor: move;}
-.widgetHolderIcons {height: 20px; background-color: #DDD; margin-right: 1px; float: left; display: none; cursor: move;}
+.widgetHolderIcons {height: 20px; background-color: #DDD; float: left; display: none; cursor: move;}
 .bg_gray {background-color: #DDD;}
-.size2of3-min{width:66%;}
-.size2of3{width:66%;}
-.size1of3-min{width:33%;}
-.size1of3{width:33%;}
-.size1of2-min{width:49.5%;}
-.size1of2{width:49.5%;}
-.size1of1-min{width:99%;}
-.size1of1{width:99%;}
 
 .widgetHolderRow{height: 20px; margin-bottom: 5px;}
 .content{margin:0px; display:block;width:100%; position: absolute;top:0;bottom:0;left:0;right:0;}
 html,body{margin:0px;padding:1px;}
-#contentSortable{border-color: black; border-style: solid; min-height: 600px; padding: 0px;}
+#contentSortable{border:0; min-height: 600px; padding: 0px; margin:15px 0 15px 15px;}
 
 .widgetHolder{height:60px; background-color:#DDD; margin-bottom: 10px; float:left;}
 
-.contentRow{height: 60px; margin-bottom: 10px;}
-.close{width: 2%; padding-left: 5px; float: left;}
-.uiCloseButton {background-image:url(../../images/fb_close.png);}
+.contentRow{height: 60px; margin-bottom: 10px; clear:left;}
+.close{width: 15px; float: left; }
+.uiCloseButton {background-image:url(../../images/fb_close.png); }
 .uiCloseButton:hover{background-position: left 30px; }
 .contentRow:hover .uiCloseButton{height: 15px; width: 15px; display: inline-block;}
 
-
-.mrm{margin-right:20px;}
+.mrm{margin-right:10px;}
 .mrs{margin-right:1px;}

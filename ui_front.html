@@ -7,50 +7,43 @@
 	<script type="text/javascript" src="scripts/js/jquery-ui-1.8.16.min.js"></script>
 	<script type="text/javascript" src="scripts/js/jquery.cookie.js"></script>
 	<script type="text/javascript" src="scripts/js/widget.js"></script>
+	<script type="text/javascript" src="scripts/js/widget.list.js"></script>
 	<link type="text/css" href="scripts/css/global.css" rel="stylesheet"/>
 </head>
 <body>
 	<div class="left_nav" >
+	  <div id="navswitch">&rarr;</div>
 		<div class="widgetHolderIconsContainer">
-<div id="left_nav_button">X</div>
 			<div  class="rowtype_1 widgetHolderRow" >
-				<div class="widgetHolderIcons size1of1"></div>
+				<div class="widgetHolderIcons size1of1i"></div>
 			</div>			
 			<div  class="rowtype_2 widgetHolderRow" >
-				<div class="widgetHolderIcons mrs size2of3" ></div>
-				<div class="widgetHolderIcons size1of3" ></div>
+				<div class="widgetHolderIcons mrs size2of3i" ></div>
+				<div class="widgetHolderIcons size1of3i" ></div>
 			</div>			
 			<div  class="rowtype_3 widgetHolderRow" >
-				<div class="widgetHolderIcons mrs size1of3" ></div>
-				<div class="widgetHolderIcons size2of3" ></div>
+				<div class="widgetHolderIcons mrs size1of3i" ></div>
+				<div class="widgetHolderIcons size2of3i" ></div>
 			</div>
 			<div  class="rowtype_4 widgetHolderRow" >
-				<div class="widgetHolderIcons mrs size1of3" ></div>
-				<div class="widgetHolderIcons mrs size1of3" ></div>
-				<div class="widgetHolderIcons size1of3" ></div>
+				<div class="widgetHolderIcons mrs size1of3i" ></div>
+				<div class="widgetHolderIcons mrs size1of3i" ></div>
+				<div class="widgetHolderIcons size1of3i" ></div>
 			</div>
 			<div class="rowtype_5 widgetHolderRow" >
-				<div class="widgetHolderIcons mrs size1of2" ></div>
-				<div class="widgetHolderIcons size1of2" ></div>
+				<div class="widgetHolderIcons mrs size1of2i" ></div>
+				<div class="widgetHolderIcons size1of2i" ></div>
 			</div>
 		</div>
-		<div class="widgetsContainer">
-			<div class="widgetElementIcons" id="CampaignTable" title="Data table"></div>
-			<div class="widgetElementIcons" id="CampaignLine" title="Line chart"></div>
-			<div class="widgetElementIcons" id="CampaignPie" title="Pie chart"></div>
-			<div class="widgetElementIcons" id="CampaignBar" title="Bar chart"></div>
-			<div class="widgetElementIcons" id="CampaignChange" title="This period vs last"></div>
-			<div class="widgetElementIcons" id="Image" title="Logo or image"></div>
-			<div class="widgetElementIcons" id="Heading" title="Heading"></div>
-			<div class="widgetElementIcons" id="Comment" title="Text block"></div>
-			<div class="widgetElementIcons" id="Appendix" title="List of segments"></div>
-			<div class="widgetElementIcons" id="CampaignScatter" title="Scatter chart"></div>
-			<div class="widgetElementIcons" id="CampaignPeriod" title="Data by period"></div>
-		</div>
+		<div class="widgetsContainer" id="widgetsContainer"></div>
 	</div>
 	<div class="content">
 		<ul id='contentSortable' class="">			
 		</ul>
+	</div>
+	<div class="frameholder">
+	  <!-- frame place holder -->
+	  []
 	</div>
 </body>
 </html>
