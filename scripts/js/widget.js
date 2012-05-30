@@ -40,17 +40,33 @@ $(document).ready(function() {
 
 				ui.draggable.empty();
 				ui.draggable.html(new_row);
+				ui.draggable.find('.widgetHolder').each(function() {
+				
+				/*
+				 * Options for jQuery droppable, used when a widget is dropped in a container.
+				 * Get the dragged widget ID and add the widget into the dropped section.
+				 */
+					$(this).droppable({
+						accept: '.widgetElementIcons',
+						hoverClass: 'drop',
+						activeClass: 'acceptable',
+						drop: function(event, ui) {
+							$(this).removeClass('h60');
+							$(this).removeClass('widgetHolder');
+							return addGoogleChart($(this), ui.draggable.attr('id'));
+						}
+					});
+				});
 			}
 			
 	    }
 	});
-	
-	$( ".widgetRow" ).sortable({
-		revert: true,
-		handle: '.drag_handle',
-		axis: 'y'
-	});
 });
+
+addGoogleChart = function(section, widgetId) {
+	var html =  '<iframe src="google_charts/annotated_timeline.html" style="width:100%;"></iframe>';
+	section.append(html);
+};
 
 /*
  * This method checks which row type place holder is dragged from the 
@@ -68,49 +84,39 @@ getRowType = function(element){
 		}
 	}
 	return type;
-}
+};
 
 getRowHtmlString = function(type) {
 	switch (type) {
 		case ('1'):
-			return "<div class='rowtype_1 contentRow'>"+
-						"<div class='widgetHolder size1of1' ></div>"+
-						"<div class='close' >"+
-							"<a class='uiCloseButton' onclick='return removeRow(this);' ></a>"+
-						"</div>"+
+			return 	"<div class='widgetHolder h60 size1of1 flt_left' ></div>"+
+					"<div class='close' >"+
+						"<a class='uiCloseButton' onclick='return removeRow(this);' ></a>"+
 					"</div>";
 		case ('2'):
-			return "<div class='rowtype_2 contentRow'>"+
-						"<div class='widgetHolder mrm size2of3' ></div>"+
-						"<div class='widgetHolder size1of3' ></div>"+
-						"<div class='close' >"+
-								"<a class='uiCloseButton' onclick='return removeRow(this);' ></a>"+
-						"</div>"+
+			return 	"<div class='widgetHolder h60 mrm size2of3 flt_left' ></div>"+
+					"<div class='widgetHolder h60 size1of3 flt_left' ></div>"+
+					"<div class='close' >"+
+							"<a class='uiCloseButton' onclick='return removeRow(this);' ></a>"+
 					"</div>";	
 		case ('3'):
-			return "<div class='rowtype_3 contentRow'>"+
-						"<div class='widgetHolder mrm size1of3' ></div>"+
-						"<div class='widgetHolder size2of3' ></div>"+
-						"<div class='close' >"+
-								"<a class='uiCloseButton' onclick='return removeRow(this);' ></a>"+
-						"</div>"+
+			return 	"<div class='widgetHolder h60 mrm size1of3 flt_left' ></div>"+
+					"<div class='widgetHolder h60 size2of3 flt_left' ></div>"+
+					"<div class='close' >"+
+							"<a class='uiCloseButton' onclick='return removeRow(this);' ></a>"+
 					"</div>";	
 		case ('4'):
-			return "<div class='rowtype_4 contentRow'>"+
-						"<div class='widgetHolder mrm size1of3' ></div>"+
-						"<div class='widgetHolder mrm size1of3' ></div>"+
-						"<div class='widgetHolder size1of3' ></div>"+
-						"<div class='close' >"+
-								"<a class='uiCloseButton' onclick='return removeRow(this);' ></a>"+
-						"</div>"+
+			return 	"<div class='widgetHolder h60 mrm size1of3 flt_left' ></div>"+
+					"<div class='widgetHolder h60 mrm size1of3 flt_left' ></div>"+
+					"<div class='widgetHolder h60 size1of3 flt_left' ></div>"+
+					"<div class='close' >"+
+							"<a class='uiCloseButton' onclick='return removeRow(this);' ></a>"+
 					"</div>";	
 		case ('5'):
-			return "<div class='rowtype_5 contentRow'>"+
-						"<div class='widgetHolder mrm size1of2' ></div>"+
-						"<div class='widgetHolder size1of2' ></div>"+
-						"<div class='close' >"+
-								"<a class='uiCloseButton' onclick='return removeRow(this);' ></a>"+
-						"</div>"+
+			return 	"<div class='widgetHolder h60 mrm size1of2 flt_left' ></div>"+
+					"<div class='widgetHolder h60 size1of2 flt_left' ></div>"+
+					"<div class='close' >"+
+							"<a class='uiCloseButton' onclick='return removeRow(this);' ></a>"+
 					"</div>";						
 	}
 };
