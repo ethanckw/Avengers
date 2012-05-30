@@ -1,13 +1,15 @@
 $(document).ready(function() {
-	
+
+    // open and remember
     if ($.cookie('navopen') == 1) {
 	showMenu();
+	$('#navswitch').html("&larr;");
     } else {
 	hideMenu();
+	$('#navswitch').html("&rarr;");
     }
 
-
-
+    // TODO : remember widget holder
     if (1 === 1) {
 	var abc = '<div id="trial" class="rowtype_3 ui-draggable contentRow">'+getRowHtmlString('3')+'</div>';
 	$('#contentSortable').append(abc);
@@ -17,7 +19,6 @@ $(document).ready(function() {
 
 
     //widgets
-	
     $( ".widgetHolderRow" ).draggable({
 	connectToSortable: "#contentSortable",
 	helper: "clone",
@@ -39,20 +40,22 @@ $(document).ready(function() {
 	    $('#navswitch').html("&rarr;");
 	}
     });
-	
+
+    // leftnav hover
     $(".left_nav").mouseenter(function(){
 	if ($.cookie('navopen') == 0) {
 	    showMenu();
 	}
     });
-	
+
+    // leftnav mouseout
     $(".left_nav").mouseleave(function(){
 	if ($.cookie('navopen') == 0) {
 	    hideMenu();
 	}
     });
 
-    //drop area
+    //drop area for widget holder
     $('#contentSortable').droppable({
 	revert: "false",
 	accept: '.widgetHolderRow',
@@ -81,6 +84,7 @@ $(document).ready(function() {
 	}
     });
 
+    // drop aread for widget
     $('.widgetHolder').droppable({
 	revert: "false",
 	accept: '.widgetElementIcons',
@@ -91,7 +95,8 @@ $(document).ready(function() {
 	    }
 	}
     });
-	
+
+    // ??
     $( ".widgetRow" ).sortable({
 	revert: true,
 	handle: '.drag_handle',
@@ -99,6 +104,7 @@ $(document).ready(function() {
     });
 });
 
+// resize widget holder space
 doResize = function(type, total, mini) {
     var size = (mini === 1)?1:10; // pixel
     switch(type) {
@@ -113,6 +119,7 @@ doResize = function(type, total, mini) {
     }
 }
 
+// update widget holder size
 updateRow = function () {
     var total = $('#contentSortable').width()-15;
     $('.size1of1').width(doResize('1', total, 0));
@@ -121,6 +128,7 @@ updateRow = function () {
     $('.size2of3').width(doResize('4', total, 0));
 }
 
+// update widget preview on left nav
 updateMenu = function () {
     var total = $('.widgetHolderIconsContainer').width();
     $('.size1of1i').width(doResize('1', total, 1));
