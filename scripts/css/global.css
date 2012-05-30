@@ -29,7 +29,7 @@
  */
 #contentSortable{border-color: black; border-style: solid; min-width: 800px; min-height: 600px; padding: 20px; margin-left: 150px; float: left;}
 #contentSortable .contentRow{ width: 98.5%; margin: 10px; float: left;}
-.widgetHolder{background-color:#DDD;}
+.widgetHolder{height: 60px; background-color:#DDD;}
 
 /* contentRow close/remove button Styling */
 .contentRow:hover .uiCloseButton{height: 15px; width: 15px; display: inline-block;}
@@ -38,7 +38,6 @@
 .uiCloseButton:hover{background-position: left 30px; }
 
 /* Misc. Fast Styling Classes */
-.h60{height:60px;}
 .mrm{margin-right:20px;}
 .mrs{margin-right:2px;}
 .flt_left{float: left;}
