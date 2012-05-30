@@ -64,7 +64,18 @@ $(document).ready(function() {
 });
 
 addGoogleChart = function(section, widgetId) {
-	var html =  '<iframe src="google_charts/annotated_timeline.html" style="width:100%;"></iframe>';
+	var html = '';
+	switch (widgetId)
+	{
+		case 'CampaignTable': 	html =  '<iframe src="google_charts/annotated_timeline.html" style="width:100%; height: 400px;"></iframe>'; break;
+		case 'CampaignLine': 	html =  '<iframe src="google_charts/area_chart.html" style="width:100%; height: 400px;"></iframe>'; break;
+		case 'CampaignPie': 	html =  '<iframe src="google_charts/bar_chart.html" style="width:100%; height: 400px;"></iframe>'; break;
+		case 'CampaignBar': 	html =  '<iframe src="google_charts/bubble_chart.html" style="width:100%; height: 400px;"></iframe>'; break;
+		case 'CampaignChange': 	html =  '<iframe src="google_charts/candlestick_chart.html" style="width:100%; height: 400px;"></iframe>'; break;
+		case 'Image': 			html =  '<iframe src="google_charts/column_chart.html" style="width:100%; height: 400px;"></iframe>'; break;
+		case 'Heading': 		html =  '<iframe src="google_charts/gauge.html" style="width:100%; height: 400px;"></iframe>'; break;
+		case 'Comment': 		html =  '<iframe src="google_charts/geo_chart.html" style="width:100%; height: 400px;"></iframe>'; break;
+	}
 	section.append(html);
 };
 
@@ -122,6 +133,6 @@ getRowHtmlString = function(type) {
 };
 
 removeRow = function(removeButton) {
-	$(removeButton).parent().parent().parent().remove(); 
+	$(removeButton).parent().parent().remove(); 
 	return false;
 };
