@@ -15,6 +15,7 @@ $(document).ready(function() {
 	$('#contentSortable').append(abc);
 	$('#trial').children('.pc').css({'width':$('#contentSortable').width()-15, 'float':'left'});
 	updateRow();
+	doDroppable();
     }
 
 
@@ -80,18 +81,7 @@ $(document).ready(function() {
 		ui.draggable.children('.pc').width($('#contentSortable').width()-15).css({'float':'left'});
 
 		updateRow();
-	    }
-	}
-    });
-
-    // drop aread for widget
-    $('.widgetHolder').droppable({
-	revert: "false",
-	accept: '.widgetElementIcons',
-	drop: function(event, ui) {
-	    if(ui.helper.hasClass('widgetElementIcons')) {
-		//alert('dropped');
-		console.log(ui);
+		doDroppable();
 	    }
 	}
     });
@@ -104,18 +94,35 @@ $(document).ready(function() {
     });
 });
 
+doDroppable = function() {
+    // drop aread for widget [drop2]
+    $('.widgetHolder').droppable({
+	revert: "false",
+	accept: '.widgetElementIcons',
+	drop: function(event, ui) {
+	    if(ui.helper.hasClass('widgetElementIcons')) {
+		alert('dropped');
+		console.log(ui);
+	    }
+	}
+    });
+}
+
 // resize widget holder space
+// to lazy to do it properly, refactor later if we have time
 doResize = function(type, total, mini) {
-    var size = (mini === 1)?1:10; // pixel
+    var size = (mini === 1)?2:10; // pixel
+    var totBorder = (mini === 1)?4:4; // widget holder bordersize
+
     switch(type) {
     case ('1'): // 1/1
-	return total;
+	return (total - totBorder);
     case ('2'): // 1/2
-	return ((total-size) / 2);
+	return (((total-size) / 2) - totBorder);
     case ('3'): // 1/3
-	return ((total-(size * 2)) / 3);
+	return (((total-(size * 2)) / 3) - totBorder);
     case ('4'): // 2/3
-	return ((((total-(size * 2)) / 3) * 2) + size);
+	return (((((total-(size * 2)) / 3) * 2) + size) - totBorder);
     }
 }
 
@@ -211,7 +218,7 @@ showMenu = function() {
     $(".widgetsContainer").show();
     $(".widgetElementIcons").show();
     $(".widgetHolderIcons").show();
-    $('.widgetHolderIconsContainer').css({'border':'1px dashed silver', 'padding':'5px 5px 0 5px'});
+    $('.widgetHolderIconsContainer').css({'border':'1px dashed silver', 'padding':'5px'});
     $('.widgetsContainer').css({
 	'border':'1px dashed silver',
 	'padding':'15px 15px 0',
