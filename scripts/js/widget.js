@@ -1,3 +1,5 @@
+var cl = function (val) { console.log(val); }; // debug line
+
 $(document).ready(function() {
 
     // open and remember
@@ -16,8 +18,30 @@ $(document).ready(function() {
 	$('#trial').children('.pc').css({'width':$('#contentSortable').width()-15, 'float':'left'});
 	updateRow();
 	doDroppable();
+	
     }
 
+    // TODO : remember widget box
+    if (1 === 1) {
+	var obj = $('#wh_1');
+	var ui = {
+	    'draggable' : {
+		'context': {
+		    'title': 'Data Table',
+		    'img' : 'report_sprite.png',
+		    'imgPos': '0 113px',
+		    'imgPosHover': '0px 56px',
+		    'wwidth' : '100%',
+		    'wheight' : '150px',
+		    'url' : 'google_charts/intensity_map.html'
+		}
+	    }
+	};
+	obj.html(wbox(ui));
+
+	populateWBox('wh_1', ui);
+	refreshWBox(obj);
+    }
 
     //widgets
     $( ".widgetHolderRow" ).draggable({
@@ -66,11 +90,7 @@ $(document).ready(function() {
 		ui.draggable.addClass('contentRow');
 
 		$.cookie('navopen', 0);
-		$(".left_nav").css({'background-color':'#DDD', 'width':'8px'});
-		$(".widgetHolderIconsContainer").hide();
-		$(".widgetsContainer").hide();
-		$(".widgetElementIcons").hide();
-		$(".widgetHolderIcons").hide();
+		hideMenu();
 
 		var type = getRowType(ui.helper);
 		var new_row = getRowHtmlString(type);
@@ -87,7 +107,7 @@ $(document).ready(function() {
     });
 
     // ??
-    $( ".widgetRow" ).sortable({
+    $( ".widget-frame" ).sortable({
 	revert: true,
 	handle: '.drag_handle',
 	axis: 'y'
@@ -101,8 +121,16 @@ doDroppable = function() {
 	accept: '.widgetElementIcons',
 	drop: function(event, ui) {
 	    if(ui.helper.hasClass('widgetElementIcons')) {
-		alert('dropped');
-		console.log(ui);
+		var type = getRowType(ui.helper);
+		var me = $(this);
+		var meid = me.attr('id'); // theres other way!
+
+		me.html(wbox(ui));
+		populateWBox(meid, ui);
+		refreshWBox($(this));
+
+		delete me;
+		delete meid; // incase!
 	    }
 	}
     });
@@ -133,6 +161,13 @@ updateRow = function () {
     $('.size1of2').width(doResize('2', total, 0));
     $('.size1of3').width(doResize('3', total, 0));
     $('.size2of3').width(doResize('4', total, 0));
+
+    // assign id on each place holder row
+    $('.pc').each(function(k, v) {
+	var type = $(this).attr('class').substr(8, 1); // cheating! i know ;)
+	$(this).attr('id', 'hr_' + (k+1) + '_' + type);
+    });
+    updateHolderId();
 }
 
 // update widget preview on left nav
@@ -142,6 +177,13 @@ updateMenu = function () {
     $('.size1of2i').width(doResize('2', total, 1));
     $('.size1of3i').width(doResize('3', total, 1));
     $('.size2of3i').width(doResize('4', total, 1));
+}
+
+// update unique id
+updateHolderId = function () {
+    $('.widgetHolder').each(function (k, v) {
+	$(this).attr('id', 'wh_' + (k + 1));
+    });
 }
 
 /*
@@ -213,7 +255,7 @@ removeRow = function(removeButton) {
 };
 
 showMenu = function() {
-    $(".left_nav").css({'background-color':'#FFF', 'width':'300px'});
+    $(".left_nav").css({'background-color':'', 'width':'300px'});
     $(".widgetHolderIconsContainer").show();
     $(".widgetsContainer").show();
     $(".widgetElementIcons").show();
