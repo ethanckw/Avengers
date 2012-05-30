@@ -1,4 +1,4 @@
-// table
+// meta package=table
 function drawVisualization() {
   // Create and populate the data table.
     var JSONObject = {

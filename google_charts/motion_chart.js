@@ -1,4 +1,4 @@
-// motionchart
+// meta package=motionchart
 function drawVisualization() {
     var data = new google.visualization.DataTable();
     data.addColumn('string', 'Fruit');

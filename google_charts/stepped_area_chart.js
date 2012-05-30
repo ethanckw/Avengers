@@ -1,4 +1,4 @@
-// corechart
+// meta package=corechart
 function drawVisualization() {
     var data = google.visualization.arrayToDataTable([
         ['Director (Year)',  'Rotten Tomatoes', 'IMDB'],

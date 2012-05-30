@@ -1,4 +1,4 @@
-// imagechart
+// meta package=imagechart
 function drawVisualization() {
   // Create and populate the data table.
     var data = google.visualization.arrayToDataTable([

@@ -1,4 +1,4 @@
-// imagechart
+// meta package=imagechart
 function drawVisualization() {
     var options = {};
       // Chart API chart type 'rs' is radar chart
