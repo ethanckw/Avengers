@@ -1,25 +1,11 @@
-#CampaignTable {	background: url('../../images/report_sprite.png') 0 113px;}
-#CampaignLine {background: url('../../images/report_sprite.png') -66px 113px;}
-#CampaignPie {background: url('../../images/report_sprite.png') -133px 113px;}
-#CampaignBar {background: url('../../images/report_sprite.png') -200px 113px;}
-#CampaignChange {background: url('../../images/report_sprite.png') -267px 113px;}
-#Image {background: url('../../images/report_sprite.png') -334px 113px;}
-#Heading {background: url('../../images/report_sprite.png') -401px 113px;}
-#Comment {background: url('../../images/report_sprite.png') -468px 113px;}
-#Appendix {background: url('../../images/report_sprite.png') -536px 113px;}
-#CampaignScatter {background: url('../../images/report_sprite.png') -602px 113px;}
-#CampaignPeriod {background: url('../../images/report_sprite.png') -669px 113px;}
-#CampaignTable:hover {background: url('../../images/report_sprite.png') 0 56px;}
-#CampaignLine:hover {background: url('../../images/report_sprite.png') -66px 169px;}
-#CampaignPie:hover {	background: url('../../images/report_sprite.png') -133px 169px;}
-#CampaignBar:hover {	background: url('../../images/report_sprite.png') -200px 169px;}
-#CampaignChange:hover {background: url('../../images/report_sprite.png') -267px 169px;}
-#Image:hover {background: url('../../images/report_sprite.png') -334px 169px;}
-#Heading:hover {	background: url('../../images/report_sprite.png') -401px 170px;}
-#Comment:hover {background: url('../../images/report_sprite.png') -468px 170px;}
-#Appendix:hover {background: url('../../images/report_sprite.png') -536px 170px;}
-#CampaignScatter:hover {background: url('../../images/report_sprite.png') -602px 169px;}
-#CampaignPeriod:hover {background: url('../../images/report_sprite.png') -669px 169px;}
+#CampaignTable {background-image: url('../../images/Loki1.jpg');}
+#CampaignLine {background: url('../../images/Loki2.jpg');}
+#CampaignPie {background: url('../../images/BlackWidow.jpg');}
+#CampaignBar {background: url('../../images/NickFury.jpg');}
+#CampaignChange {background: url('../../images/CaptainAmerica.jpg');}
+#Image {background: url('../../images/Hulk.jpg');}
+#Heading {background: url('../../images/IronMan.jpg');}
+#Comment {background: url('../../images/Thor.jpg');}
 
 .left_nav{position: fixed; z-index: 10000; height: 500px; width: 20px; background-color: #DDD;}
 .left_nav:hover{width:150px; background-color: white;}
