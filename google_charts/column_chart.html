@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="./column_chart.js"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages: ["corechart"]});
+      google.setOnLoadCallback(drawVisualization);
+    </script>
+  </head>
+  <body>
+    <div id="visualization" style="width: auto; height: 500px;"></div>
+  </body>
+</html>

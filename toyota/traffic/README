@@ -1,0 +1,15 @@
+Internet traffic to/from different domains (TRAFFIC)
+----------------------------------------------------
+   Display top 10 domains with the highest traffic in that hour/day
+
+   Traffic stats can be mined from Hitwise 
+
+   Probably have a few pre-set domains can be set base on verticals, e.g.
+      CARS: Honda domain, Toyota domain, Nissan domain, Ford domain, etc
+      JEWELRY: Tiffany, Zales, etc
+      GROCERIES: Walmart, K-mart, Target, etc 
+      COMPUTER: Dell, HP, Apple, Toshiba, Sony
+
+   Users able to customize the domains that they wish to monitor
+
+   Hitwise ranking of client sites vs competitors. 

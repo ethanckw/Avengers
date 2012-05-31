@@ -1,4 +1,4 @@
-// corechart
+// meta package=corechart
 function drawVisualization() {
     // Create and populate the data table.
     var data = google.visualization.arrayToDataTable([

@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="./image_chart.js"></script>
+    <script type="text/javascript">
+      google.load("visualization", "1", {packages: ["imagechart"]});
+      google.setOnLoadCallback(drawVisualization);
+    </script>
+  </head>
+  <body>
+    <div id="visualization" style="width: auto; height: 500px;"></div>
+  </body>
+</html>

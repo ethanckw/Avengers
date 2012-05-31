@@ -1,1 +1,3 @@
 Run gen_html.sh to generate index.html and other *.html files.
+
+These definately work on CHROME, FF might complain.

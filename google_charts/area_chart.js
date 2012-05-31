@@ -1,4 +1,5 @@
-// corechart
+// meta package=corechart
+// meta width=100%
 function drawVisualization() {
     // Some raw data (not necessarily accurate)
     var data = google.visualization.arrayToDataTable([
