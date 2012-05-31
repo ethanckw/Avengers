@@ -187,6 +187,26 @@ updateHolderId = function () {
 }
 
 /*
+ * Depending on the widgetID value/name, it constructs the HTML IFRAME for different widgets
+ * and attach it into the specified section.
+ */
+addGoogleChart = function(section, widgetId) {
+	var html = '';
+	switch (widgetId)
+	{
+		case 'CampaignTable': 	html =  '<iframe src="google_charts/annotated_timeline.html" style="width:100%; height: 400px;"></iframe>'; break;
+		case 'CampaignLine': 	html =  '<iframe src="google_charts/area_chart.html" style="width:100%; height: 400px;"></iframe>'; break;
+		case 'CampaignPie': 	html =  '<iframe src="google_charts/bar_chart.html" style="width:100%; height: 400px;"></iframe>'; break;
+		case 'CampaignBar': 	html =  '<iframe src="google_charts/bubble_chart.html" style="width:100%; height: 400px;"></iframe>'; break;
+		case 'CampaignChange': 	html =  '<iframe src="google_charts/candlestick_chart.html" style="width:100%; height: 400px;"></iframe>'; break;
+		case 'Image': 			html =  '<iframe src="google_charts/column_chart.html" style="width:100%; height: 400px;"></iframe>'; break;
+		case 'Heading': 		html =  '<iframe src="google_charts/gauge.html" style="width:100%; height: 400px;"></iframe>'; break;
+		case 'Comment': 		html =  '<iframe src="google_charts/geo_chart.html" style="width:100%; height: 400px;"></iframe>'; break;
+	}
+	section.append(html);
+};
+
+/*
  * This method checks which row type place holder is dragged from the 
  * It reads the #ID of the element and extract out the rowtype_xx value
  * The xx value would be the type.
@@ -200,11 +220,21 @@ getRowType = function(element){
 	    type = elementIdArray[i].replace('rowtype_', '');
 	    return type;
 	}
+<<<<<<< HEAD
     }
     return type;
 }
+=======
+	return type;
+};
+>>>>>>> c574ecf29eb7cb350464bceb5d0db6976e3e9d01
 
+/*
+ * @type (int)	: Index of a widgetRow
+ * @return		: HTML Snippets of the corresponding Index
+ */
 getRowHtmlString = function(type) {
+<<<<<<< HEAD
     switch (type) {
     case ('1'):
 	return "<div class='rowtype_1 contentRow pc'>"+
@@ -247,11 +277,53 @@ getRowHtmlString = function(type) {
 	    "<a class='uiCloseButton' onclick='return removeRow(this);' ></a>"+
 	    "</div>";
     }
+=======
+	switch (type) {
+		case ('1'):
+			return 	"<div class='widgetHolder size1of1 flt_left' ></div>"+
+					"<div class='close' >"+
+						"<a class='uiCloseButton' onclick='return removeRow(this);' ></a>"+
+					"</div>";
+		case ('2'):
+			return 	"<div class='widgetHolder mrm size2of3 flt_left' ></div>"+
+					"<div class='widgetHolder size1of3 flt_left' ></div>"+
+					"<div class='close' >"+
+							"<a class='uiCloseButton' onclick='return removeRow(this);' ></a>"+
+					"</div>";	
+		case ('3'):
+			return 	"<div class='widgetHolder mrm size1of3 flt_left' ></div>"+
+					"<div class='widgetHolder size2of3 flt_left' ></div>"+
+					"<div class='close' >"+
+							"<a class='uiCloseButton' onclick='return removeRow(this);' ></a>"+
+					"</div>";	
+		case ('4'):
+			return 	"<div class='widgetHolder mrm size1of3 flt_left' ></div>"+
+					"<div class='widgetHolder mrm size1of3 flt_left' ></div>"+
+					"<div class='widgetHolder size1of3 flt_left' ></div>"+
+					"<div class='close' >"+
+							"<a class='uiCloseButton' onclick='return removeRow(this);' ></a>"+
+					"</div>";	
+		case ('5'):
+			return 	"<div class='widgetHolder mrm size1of2 flt_left' ></div>"+
+					"<div class='widgetHolder size1of2 flt_left' ></div>"+
+					"<div class='close' >"+
+							"<a class='uiCloseButton' onclick='return removeRow(this);' ></a>"+
+					"</div>";						
+	}
+>>>>>>> c574ecf29eb7cb350464bceb5d0db6976e3e9d01
 };
 
+/*
+ * Function that removes a contentRow widget container
+ */
 removeRow = function(removeButton) {
+<<<<<<< HEAD
     $(removeButton).parent().parent().remove();
     return false;
+=======
+	$(removeButton).parent().parent().remove(); 
+	return false;
+>>>>>>> c574ecf29eb7cb350464bceb5d0db6976e3e9d01
 };
 
 showMenu = function() {
