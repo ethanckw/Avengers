@@ -264,7 +264,7 @@ showMenu = function() {
     $('.widgetsContainer').css({
 	'border':'1px dashed silver',
 	'padding':'15px 15px 0',
-	'margin-top':'10px',
+//	'margin-top':'10px',
 	'height': ($('.left_nav').height() - ($('.navswitch').height() + $('.widgetHolderIconsContainer').height() + 7))
     });
     updateMenu();
@@ -280,3 +280,4 @@ hideMenu = function() {
     $('.widgetsContainer').css({'border':'0', 'padding':'0'});
     updateMenu();
 }
+
