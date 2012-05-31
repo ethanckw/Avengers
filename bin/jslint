@@ -1,0 +1,137 @@
+#!/usr/bin/env perl
+
+# jslint -- wrap jslint for simpler developer execution
+
+use strict;
+use warnings;
+
+use FindBin;
+use Getopt::Long;
+use Pod::Usage;
+use File::HomeDir;
+
+sub usage {
+    pod2usage(
+        -verbose => 2,
+        -input   => ( $0 eq '-' ) ? $FindBin::Script : undef
+    );
+}
+
+my $java_lib   = '/usr/share/yuicompressor-2.4.2/lib';
+my $jslint_lib = File::HomeDir->my_home . '/cm_fusion/jslib';
+my $report     = '';
+
+Getopt::Long::Configure( 'no_ignore_case', 'pass_through' );
+Getopt::Long::GetOptions(
+    'java-lib=s'   => \$java_lib,
+    'jslint-lib=s' => \$jslint_lib,
+    'report'       => \$report,
+    'help'         => \&usage
+);
+
+my $rhino        = $java_lib . '/rhino-1.6R7.jar';
+my $console_path = $jslint_lib . '/jslint-console-cm.js';
+my $full_path    = $jslint_lib . '/fulljslint.js';
+
+sub java_found {
+    my $version = `java -version 2>&1`;
+    if ( !$version ) {
+        return 0;
+    }
+    return 1;
+}
+
+sub file_found {
+    my $file = shift;
+    if ( -s $file ) {
+        return 1;
+    }
+    return 0;
+}
+
+if ( !java_found() ) {
+    die "ERROR: Java not found";
+}
+
+if ( !file_found($rhino) ) {
+    die 'Error: Rhino jar not found in ' . $rhino;
+}
+if ( !file_found($console_path) ) {
+    die 'ERROR: console file not found in ' . $console_path;
+}
+if ( !file_found($full_path) ) {
+    die 'Error: full file not found in ' . $full_path;
+}
+
+if (! scalar @ARGV) {
+    usage();
+    exit(1);
+}
+
+for my $file (@ARGV) {
+    if ( !-s $file ) {
+        print STDERR 'WARN: File not found: ' . $file;
+    } elsif ( $file !~ /\.js$/ ) {
+        print STDERR 'WARN: File is not a JavaScript file';
+    } else {
+        my @args = ( 'java', '-jar', $rhino, $console_path, $full_path );
+        if ($report) {
+            push( @args, '-report' );
+        }
+        push( @args, $file );
+        system(@args);
+    }
+}
+
+__END__
+
+=head1 NAME
+
+jslint - run jslint on a set of JavaScript files
+
+=head1 SYNOPSIS
+
+jslint [OPTION] FILE
+
+=head1 DESCRIPTION
+
+Run jslint L<http://jslint.org> on your JavaScript files.  Note, requires Java
+as well as the Rhino L<https://www.mozilla.org/rhino/> to run properly.
+
+Example:
+
+C<jslint htdocs/js/ECM.js>
+
+=head1 OPTIONS
+
+=item B<--java-lib>
+
+Path to the directory that contains the Rhino jar.  Default is
+'/usr/share/yuicompressor-2.4.2/lib'. 
+
+=item B<--jslint-lib>
+
+Path to the directory that contains fulljslint.js and jslint-console.js
+files.  Default is '$HOME/cm_fusion/lib/jslint'.
+
+=item B<--report>
+
+At the end of the report, print out a comment that contains all of the names
+and string literals that were used with dot notation, subscript notation, and
+object literals to name the members of objects. You can look through the list
+for misspellings.
+
+Also prints out any unused variables, globals and functions.
+
+=item B<--help>
+
+Print out this help message.
+
+=head1 AUTHOR
+
+Seth Mason, E<lt>smason@cheetahmail.comE<gt>
+
+=cut
+
+=cut
+
