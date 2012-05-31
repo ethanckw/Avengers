@@ -70,8 +70,36 @@ border: 2px dashed #C0C0C0;
 }
 .widget-title {
     font-size:1.1em;
+    float: left;
 }
 .widget-action {
+    height: 20px;
+    width: 36px;
+    float: right;
+    margin: 3px 2px 0 0;
+}
+.widget-action div {
+    padding: 1px 0;
+}
+.widget-action-refresh {
+    width: 16px;
+    height: 16px;
+    float: left;
+    background-image: url('../../images/actions.png');
+    background-position: -1px -192px;
+    background-repeat: no-repeat;
+    margin: 1px;
+    cursor: pointer;
+}
+.widget-action-close {
+    width: 16px;
+    height: 16px;
+    float: left;
+    background-image: url('../../images/icon.png');
+    background-position: -1px -160px;
+    background-repeat: no-repeat;
+    margin: 1px;
+    cursor: pointer;
 }
 .widget-body {
     border: 1px solid #93B9C9;
@@ -91,10 +119,10 @@ border: 2px dashed #C0C0C0;
     width: 100%;
     height: 100%;
     background-color: #000;
-    opacity: 0.5;
+    opacity: 0.2;
 }
 .widget-body-overlay-loader {
-   opacity: 1;
+   opacity: .8;
    z-index:110;
    position:absolute;
    top:1px;
