@@ -5,8 +5,8 @@ var widgetIcon = [{
 	'imgPos': '0 113px',
 	'imgPosHover': '0px 56px',
 	'width' : '100%',
-	'height' : '300px',
-	'url' : 'http://kode.fahmi.my'
+	'height' : '200px',
+	'url' : 'google_charts/bar_chart.html'
     },
     'CampaignLine' : {
 	'title': 'Line chart',
@@ -14,8 +14,8 @@ var widgetIcon = [{
 	'imgPos': '-66px 113px',
 	'imgPosHover': '-66px 169px',
 	'width' : '100%',
-	'height' : '300px',
-	'url' : 'http://kode.fahmi.my'
+	'height' : '200px',
+	'url' : 'http://localhost'
     },
     'CampaignPie' : {
 	'title': 'Pie chart',
@@ -23,7 +23,7 @@ var widgetIcon = [{
 	'imgPos': '-133px 113px',
 	'imgPosHover': '-133px 169px',
 	'width' : '100%',
-	'height' : '300px',
+	'height' : '100px',
 	'url' : 'http://kode.fahmi.my'
     },
     'CampaignBar' : {
@@ -32,7 +32,7 @@ var widgetIcon = [{
 	'imgPos': '-200px 113px',
 	'imgPosHover': '-200px 169px',
 	'width' : '100%',
-	'height' : '300px',
+	'height' : '150px',
 	'url' : 'http://kode.fahmi.my'
     },
     'CampaignChange' : {
@@ -41,7 +41,7 @@ var widgetIcon = [{
 	'imgPos': '-267px 113px',
 	'imgPosHover': '-267px 169px',
 	'width' : '100%',
-	'height' : '300px',
+	'height' : '400px',
 	'url' : 'http://kode.fahmi.my'
     },
     'Image' : {
@@ -109,6 +109,8 @@ $(document).ready(function() {
 		+ 'id="' + k2 + '" '
 		+ 'class="widgetElementIcons" '
 		+ 'title="' + v2.title + '" '
+		+ 'wheight="' + v2.height + '" '
+		+ 'url="' + v2.url + '" '
 		+ 'style="'
 		+ 'display: block; '
 		+ 'position: relative;'

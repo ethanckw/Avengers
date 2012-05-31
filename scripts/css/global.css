@@ -1,18 +1,46 @@
+body{
+font:11px/24px Arial,Helvetica,sans-serif
+}
 .left_nav{position: fixed; z-index: 100; height: 500px;}
-.left_nav:hover{width:150px; background-color: white;}
+.navswitch {max-height:20px;}
+.widgetHolderIconsContainer{background-color:#FFF;}
+.widgetsContainer{background-color:#FFF;}
+
 .widgetElementIcons {height: 56px; width: 67px; float: left; display: none; cursor: move;}
 .widgetHolderIcons {height: 20px; float: left; display: none; cursor: move; border: 2px solid #DDDDDD;background-color:#F1F1F1; }
 .bg_gray {background-color: #DDD;}
 
 .widgetHolderRow{height: 20px; margin-bottom: 5px; padding-bottom:1px;}
-.content{margin:0px; display:block;width:100%; position: absolute;top:0;bottom:0;left:0;right:0;}
+
+.content{
+    margin:0px;
+    display:block;
+    width:100%;
+/*
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+*/
+}
 html,body{margin:0px;padding:1px;}
 #contentSortable{border:0; min-height: 600px; padding: 0px; margin:15px 0 15px 15px;}
 
-.widgetHolder{height:60px; margin-bottom: 10px; float:left; border: 2px dashed #E2E2E2;}
-.widgetHolder:hover { border: 2px dashed #C0C0C0; }
+.widgetHolder{
+min-height:60px;
+margin-bottom: 10px;
+float:left;
+border: 2px dashed #E2E2E2;
+}
+.widgetHolder:hover {
+border: 2px dashed #C0C0C0;
+}
 
-.contentRow{height: 60px; margin-bottom: 15px; clear:left;}
+.contentRow{
+    min-height: 60px;
+    clear:left;
+}
 .close{width: 15px; float: left; }
 .uiCloseButton {background-image:url(../../images/fb_close.png); }
 .uiCloseButton:hover{background-position: left 30px; }
@@ -20,3 +48,120 @@ html,body{margin:0px;padding:1px;}
 
 .mrm{margin-right:10px;}
 .mrs{margin-right:1px;}
+
+
+/** widget box */
+.widget-frame {
+    width: 100%;
+    -webkit-box-shadow:0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid #93B9C9;
+}
+.widget-head {
+    background: transparent url('../../images/widgets.png') no-repeat right -150px;
+    padding: 0 4px 0 0;
+}
+.widget-head-content {
+    background: transparent url('../../images/widgets.png') no-repeat left -100px;
+    color: #303D45;
+    padding: 4px 0;
+    cursor: move;
+    min-height: 20px;
+    overflow: hidden;
+    position: relative;
+}
+.widget-icon {
+    height: 16px;
+    width: 16px;
+    cursor: pointer;
+    float: left;
+    padding: 2px 2px 0 2px;
+    border-bottom: none;
+    background: transparent url('../../images/actions.png') no-repeat 0 -288px;
+    margin: 1px 0 0 6px;
+}
+.widget-title {
+    font-size:1.1em;
+    float: left;
+}
+.widget-action {
+    height: 20px;
+    width: 36px;
+    float: right;
+    margin: 3px 2px 0 0;
+}
+.widget-action div {
+    padding: 1px 0;
+}
+.widget-action-refresh {
+    width: 16px;
+    height: 16px;
+    float: left;
+    background-image: url('../../images/actions.png');
+    background-position: -1px -192px;
+    background-repeat: no-repeat;
+    margin: 1px;
+    cursor: pointer;
+}
+.widget-action-close {
+    width: 16px;
+    height: 16px;
+    float: left;
+    background-image: url('../../images/icon.png');
+    background-position: -1px -160px;
+    background-repeat: no-repeat;
+    margin: 1px;
+    cursor: pointer;
+}
+.widget-body {
+    border: 1px solid #93B9C9;
+    border-top: 0;
+    border-bottom: 0;
+}
+.widget-body-content {
+    height: 100px; /* remove later */
+}
+
+.widget-body-overlay {
+    position:absolute;
+    display:none;
+    z-index: 100;
+}
+.widget-body-overlay-opac {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.2;
+}
+.widget-body-overlay-loader {
+   opacity: .5;
+   z-index:110;
+   position:absolute;
+   top:1px;
+   width: 100%;
+   height: 100%;
+   background:url('../../images/loading.gif') no-repeat center center;
+}
+
+#client {
+   width: 99%;
+   height: 75px;
+   margin: 0 2px 10px;
+   background-image: url('../../images/toyota.gif');
+   background-repeat: no-repeat;
+   background-position: -42px -2px;
+}
+#experian {
+   color: #7D7D7D;
+   font-size: 13px;
+   float: right;
+   margin: 40px 5px 0 0;
+}
+#experian div.experian-prod {
+   float: left;
+   position:absolute;
+}
+#experian img {
+   height: 30px;
+   margin: 0 4px;
+}

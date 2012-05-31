@@ -8,6 +8,7 @@
 	<script type="text/javascript" src="scripts/js/jquery.cookie.js"></script>
 	<script type="text/javascript" src="scripts/js/widget.js"></script>
 	<script type="text/javascript" src="scripts/js/widget.list.js"></script>
+	<script type="text/javascript" src="scripts/js/widget.box.js"></script>
 	<link type="text/css" href="scripts/css/global.css" rel="stylesheet"/>
 </head>
 <body>
@@ -37,13 +38,39 @@
 		</div>
 		<div class="widgetsContainer" id="widgetsContainer"></div>
 	</div>
+	<div id="client">
+	  <div id="experian">
+	    <div class="experian-prod">Experian Product</div>
+	    <img id="cheetahmail" class="experian-product" src="images/product/cheetahmail.png" />
+	    <img id="cheetahmail" class="experian-product" src="images/product/hitwise.png" />
+	    <img id="cheetahmail" class="experian-product" src="images/product/qas.png" />
+	    <img id="cheetahmail" class="experian-product" src="images/product/footfall.png" />
+	    <img id="cheetahmail" class="experian-product" src="images/product/simmons.png" />
+	  </div>
+	</div>
 	<div class="content">
-		<ul id='contentSortable' class="">			
-		</ul>
+	  <ul id='contentSortable' class=""></ul>
 	</div>
 	<div class="frameholder">
-	  <!-- frame place holder -->
-	  []
+	  <div class="widget-frame">
+	    <div class="widget-head">
+	      <div class="widget-head-content">
+		<div class="widget-icon"></div>
+		<div class="widget-title"></div>
+		<div class="widget-action">
+		  <div class="widget-action-refresh"></div>
+		  <div class="widget-action-close"></div>
+		</div>
+	      </div>
+	    </div>
+	    <div class="widget-body">
+	      <div class="widget-body-content"></div>
+	      <div class="widget-body-overlay">
+		<div class="widget-body-overlay-opac"></div>
+		<div class="widget-body-overlay-loader"></div>
+	      </div>
+	    </div>
+	  </div>
 	</div>
 </body>
 </html>
