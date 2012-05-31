@@ -1,6 +1,7 @@
 // meta title=Top 5 Search Terms Driving Traffic to Toyota Motor Sales
 // meta package=corechart
 // meta width=100%
+// meta source=Hitwise
 function drawVisualization() {
     // Some raw data (not necessarily accurate)
     var data = google.visualization.arrayToDataTable([
