@@ -6,25 +6,25 @@ var widgetIcon = [{
 	'imgPosHover': '0px 56px',
 	'width' : '100%',
 	'height' : '200px',
-	'url' : 'widgets/live.html'
+	'url' : 'toyota/live/live.html'
     },
-    'CampaignLine' : {
-	'title': 'Line chart',
+    'Eval1' : {
+	'title': 'Pre-Campaign Assessment',
 	'img' : 'report_sprite.png',
 	'imgPos': '-66px 113px',
 	'imgPosHover': '-66px 169px',
 	'width' : '100%',
-	'height' : '200px',
-	'url' : 'http://localhost'
+	'height' : '800px',
+	'url' : 'toyota/eval/eval.html'
     },
-    'CampaignPie' : {
-	'title': 'Pie chart',
+    'Eval2' : {
+	'title': 'Target Audience Overview',
 	'img' : 'report_sprite.png',
 	'imgPos': '-133px 113px',
 	'imgPosHover': '-133px 169px',
 	'width' : '100%',
-	'height' : '100px',
-	'url' : 'http://kode.fahmi.my'
+	'height' : '300px',
+	'url' : 'toyota/eval/audience_overview.html'
     },
     'CampaignBar' : {
 	'title': 'Bar chart',
