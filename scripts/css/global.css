@@ -122,7 +122,7 @@ border: 2px dashed #C0C0C0;
     opacity: 0.2;
 }
 .widget-body-overlay-loader {
-   opacity: .8;
+   opacity: .5;
    z-index:110;
    position:absolute;
    top:1px;
