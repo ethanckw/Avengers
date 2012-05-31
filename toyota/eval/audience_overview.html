@@ -5,17 +5,119 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Pre Campaign Assessment</title>
 <style type="text/css">
-    .image_container {width: 400px; float: left; height:300px;}
-	.content{width: 800px;}
+    .param_input {width: 200px; float: left; height:20px; margin-bottom: 10px;}
+	#age, #income {width: 400px;}
+	.rows {width: 600px;}
+	input {width: 80px;}
 </style>
 <script type="text/javascript" src="../../scripts/js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="../../scripts/js/eval.js"></script>
 </head>
 <body>
 	<h2>Target Audience Overview</h2>
-	<div class="content">
-		<select>
-		</select>
+	<div class="content-input">
+		<div class="rows">
+			<div id="gender" class="param_input">
+				Gender: <select>
+					<option>Male</option>
+					<option>Female</option>
+					<option>Both</option>					
+				</select>
+			</div>
+			<div id="age" class="param_input">
+				Age (Min): <input type="text" />
+				Age (Max): <input type="text" />
+			</div>
+		</div>
+		<div class="rows">
+			<div id="state" class="param_input">
+				State: <select>
+					<option>Alabama</option>
+					<option>Alaska</option>
+					<option>Arizona</option>
+					<option>Arkansas</option>
+					<option>California</option>
+					<option>Colorado</option>
+					<option>Connecticut</option>
+					<option>Delaware</option>
+					<option>Florida</option>
+					<option>Georgia</option>
+					<option>Hawaii</option>
+					<option>Idaho</option>
+					<option>Illinois</option>
+					<option>Indiana</option>
+					<option>Iowa</option>
+					<option>Kansas</option>
+					<option>Kentucky</option>
+					<option>Louisiana</option>
+					<option>Maine</option>
+					<option>Maryland</option>
+					<option>Massachusetts</option>
+					<option>Michigan</option>
+					<option>Minnesota</option>
+					<option>Mississippi</option>
+					<option>Missouri</option>
+					<option>Montana</option>
+					<option>Nebraska</option>
+					<option>Nevada</option>
+					<option>New Hampshire</option>
+					<option>New Jersey</option>
+					<option>New Mexico</option>
+					<option>New York</option>
+					<option>North Carolina</option>
+					<option>North Dakota</option>
+					<option>Ohio</option>
+					<option>Oklahoma</option>
+					<option>Oregon</option>
+					<option>Pennsylvania</option>
+					<option>Rhode Island</option>
+					<option>South Carolina</option>
+					<option>South Dakota</option>
+					<option>Tennessee</option>
+					<option>Texas</option>
+					<option>Utah</option>
+					<option>Vermont</option>
+					<option>Virginia</option>
+					<option>Washington</option>
+					<option>West Virginia</option>
+					<option>Wisconsin</option>
+					<option>Wyoming</option>
+				</select>
+			</div>
+			<div id="income" class="param_input">
+				Income Min: <input type="text" />
+				Income Max: <input type="text" />
+			</div>
+		</div>
+	</div>
+	<div class="content-results">
+		<div class="TL-section">
+			<div class="section_img">
+				<img src="" alt="Advertise in Facebook">
+			</div>
+			<div id="tl_audience" class="section_audience">
+			</div>
+			<div id="tl_cost" class="section_cost">
+			</div>
+		</div>
+		<div class="CM-section">
+			<div class="section_img">
+				<img src="" alt="Advertise in Facebook">
+			</div>
+			<div id="tl_audience" class="section_audience">
+			</div>
+			<div id="tl_cost" class="section_cost">
+			</div>
+		</div>
+		<div class="QAS-section">
+			<div class="section_img">
+				<img src="" alt="Advertise in Facebook">
+			</div>
+			<div id="tl_audience" class="section_audience">
+			</div>
+			<div id="tl_cost" class="section_cost">
+			</div>
+		<div>
 	</div>
 </body>
 </html>
