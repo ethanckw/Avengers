@@ -7,8 +7,11 @@
 <style type="text/css">
     .param_input {width: 200px; float: left; height:20px; margin-bottom: 10px;}
 	#age, #income {width: 400px;}
-	.rows {width: 600px;}
 	input {width: 80px;}
+	.section {width: 150px; float: left; margin-left: 50px;}
+	.rows {width: 600px;}
+	.content-input, .content-results {width: 600px; float: left; margin-bottom: 20px;}
+	body {width: 1000px; }
 </style>
 <script type="text/javascript" src="../../scripts/js/jquery-1.7.2.min.js"></script>
 <script type="text/javascript" src="../../scripts/js/eval.js"></script>
@@ -25,8 +28,8 @@
 				</select>
 			</div>
 			<div id="age" class="param_input">
-				Age (Min): <input type="text" />
-				Age (Max): <input type="text" />
+				Age (Min): <input id="age_min" type="text" />
+				Age (Max): <input id="age_max" type="text" />
 			</div>
 		</div>
 		<div class="rows">
@@ -85,37 +88,37 @@
 				</select>
 			</div>
 			<div id="income" class="param_input">
-				Income Min: <input type="text" />
-				Income Max: <input type="text" />
+				Income Min: <input id="income_min" type="text" />
+				Income Max: <input id="income_max" type="text" />
 			</div>
 		</div>
 	</div>
 	<div class="content-results">
-		<div class="TL-section">
+		<div class="section">
 			<div class="section_img">
-				<img src="" alt="Advertise in Facebook">
+				<img src="../../images/eval/facebook.png" alt="Advertise in Facebook">
 			</div>
 			<div id="tl_audience" class="section_audience">
 			</div>
 			<div id="tl_cost" class="section_cost">
 			</div>
 		</div>
-		<div class="CM-section">
+		<div class="section">
 			<div class="section_img">
-				<img src="" alt="Advertise in Facebook">
+				<img src="../../images/eval/email.jpg" alt="Email Advertising">
 			</div>
-			<div id="tl_audience" class="section_audience">
+			<div id="cm_audience" class="section_audience">
 			</div>
-			<div id="tl_cost" class="section_cost">
+			<div id="cm_cost" class="section_cost">
 			</div>
 		</div>
-		<div class="QAS-section">
+		<div class="section">
 			<div class="section_img">
-				<img src="" alt="Advertise in Facebook">
+				<img src="../../images/eval/post-box.jpg" alt="Postal Advertising">
 			</div>
-			<div id="tl_audience" class="section_audience">
+			<div id="qas_audience" class="section_audience">
 			</div>
-			<div id="tl_cost" class="section_cost">
+			<div id="qas_cost" class="section_cost">
 			</div>
 		<div>
 	</div>
