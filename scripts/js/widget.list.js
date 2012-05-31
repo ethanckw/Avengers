@@ -1,12 +1,12 @@
 var widgetIcon = [{
-    'CampaignTable' : {
-	'title': 'Data table',
+    'Feed' : {
+	'title': 'News Feed',
 	'img' : 'report_sprite.png',
 	'imgPos': '0 113px',
 	'imgPosHover': '0px 56px',
 	'width' : '100%',
 	'height' : '200px',
-	'url' : 'google_charts/bar_chart.html'
+	'url' : 'widgets/live.html'
     },
     'CampaignLine' : {
 	'title': 'Line chart',
